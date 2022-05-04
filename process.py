@@ -12,7 +12,7 @@ path/to/python path/to/this_file --input username.csv --output out.csv --output-
 def main(input_filename: str, output_filename: str, output_keys: list):
 
     def filter_func(row_dict: dict):
-        return len(row_dict["Location"]) > 6
+        return float(row_dict["PRE_24H"]) != 0
 
     summary = {
         "input_total": 0,
